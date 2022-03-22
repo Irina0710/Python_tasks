@@ -1,18 +1,17 @@
 #Проверить истинность утверждения ¬(X ⋁ Y  ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат
-def is_true(x,)
+def is_true(x,y,z):
+    expression1 = not(x or y or z)
+    expression2 = not x and not y and not z
+    return expression1 == expression2
+signal=True
+for x in range(0, 2):
+    for y in range(0, 2):
+        for z in range(0, 2):
+            if not is_true(x,y,z):
+                signal = False
+            print(f'{x=}, {y=}, {z=}, result = {is_true(x,y,z)}')
 
-X = False
-Y = True
-Z = False
-print(f'Исходные данные: X = {X}, Y = {Y}, Z = {Z}')
-
-for X in range(0, 2):
-    for Y in range(0, 2):
-        for Z in range(0, 2):
-            r1 = not (X or Y or Z)
-            r2 = not (X) and not (Y) and not (Z)
-
-if r1 == r2:
+if signal==True:
     print('True ')
 else:
     print ('False')

@@ -4,7 +4,7 @@
 userNumber = int(input('Input any number.'))
 list = []
 i = 0
-for i in range(-userNumber, userNumber+1):
+for i in range(-userNumber, userNumber+1, 2): # сделали шаг 2 чтобы сократить колво элементов до N
     list.append(i)
 result = 1
 with open('C:/Users/Юлия/OneDrive/Рабочий стол/HELLO PYTHON/Hello python/file.txt', 'r') as data:

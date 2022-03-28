@@ -1,7 +1,9 @@
 # для натурального n создать словарь индекс-значение, состоящий из элементов последовательности 3n + 1.
 # Для n = 6: {1: 4, 2: 7, 3: 10, 4: 13, 5: 16, 6: 19}
 N = int (input('Введите число элементов'))
-myDictionary = {}
-for i in range (1, N +1):
-    myDictionary[i] = 3 * i + 1
+myDictionary = {i: 3*i+1 for i in range (1,N+1)}
+# или осставляем пустые фигурные скобки и дальше словарь заполняем в цикле
+# for i in range (1, N +1):
+#     myDictionary[i] = 3 * i + 1
 print(f'Для N = {N}: {myDictionary}')
+print(myDictionary)

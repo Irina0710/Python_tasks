@@ -1,9 +1,14 @@
 # Написать программу преобразования десятичного числа в двоичное
-print('введите число')
-number = 31
-binary_number = []
-while number >=1:
-    binary_digit = number%2
-    number = number // 2
-    binary_number.append(binary_digit)
-print(binary_number)
+number = 14
+def binary_func(number):
+    binary_number = []
+    while number >=1:
+        binary_digit = number%2
+        number = number // 2
+        binary_number.append(str(binary_digit))
+    return binary_number
+result = binary_func(number)
+print(result)
+result.reverse()
+print(result)
+print(''.join(result))
